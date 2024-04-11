@@ -5,10 +5,11 @@ import {
   PaperAirplaneIcon,
   PhoneIcon,
   PlayCircleIcon,
+  XMarkIcon,
 } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import { useState, Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
+import { Dialog, Popover, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "lucide-react";
 import { HomeIcon } from "@heroicons/react/20/solid";
 import { ChatBubbleOvalLeftIcon } from "@heroicons/react/20/solid";
@@ -156,6 +157,35 @@ function Header() {
           </Link>
         </div>
       </nav>
+
+      <Dialog
+        as="div"
+        className="lg:hidden"
+        open={isMenuOpen}
+        onClose={setIsMenuOpen}
+      >
+        <div className="fixed inset-0 z-10" />
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-[#013B94] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div className="flex items-center justify-between">
+            <a href="#" className="-m-1.5 p-1.5">
+              <span className="sr-only">Booking.com</span>
+              <img
+                className="h-8 w-auto"
+                src="https://cf.bstatic.com/static/img/bcom_logo_blue_bg/f12f834e849b2a7f752a14b2598a6ddfeda1e713.svg"
+                alt="Booking.com Logo"
+              />
+            </a>
+            <button
+              type="button"
+              className="-m-2.5 rounded-md p-2.5 text-white"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <span className="sr-only">Close menu</span>
+              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+            </button>
+          </div>
+        </Dialog.Panel>
+      </Dialog>
     </header>
   );
 }
