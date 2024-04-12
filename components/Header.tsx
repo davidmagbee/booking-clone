@@ -55,7 +55,7 @@ function Header() {
             <span className="sr-only">Booking.com Clone</span>
             <img
               className="h-12 w-auto"
-              src="https://cf.bstatic.com/static/img/bcom_logo_blue_bg/f12f834e849b2a7f752a14b2598a6ddfeda1e713.svg"
+              src="https://images.squarespace-cdn.com/content/5bde0f00c3c16aa95581e2e2/1656116234438-NLIQ8XQTV7D805TPUH8X/booking+logo+white.png?format=1500w&content-type=image%2Fpng"
               alt="Booking.com Logo"
             />
           </Link>
@@ -172,7 +172,7 @@ function Header() {
               <span className="sr-only">Booking.com</span>
               <img
                 className="h-8 w-auto"
-                src="https://cf.bstatic.com/static/img/bcom_logo_blue_bg/f12f834e849b2a7f752a14b2598a6ddfeda1e713.svg"
+                src="https://images.squarespace-cdn.com/content/5bde0f00c3c16aa95581e2e2/1656116234438-NLIQ8XQTV7D805TPUH8X/booking+logo+white.png?format=1500w&content-type=image%2Fpng"
                 alt="Booking.com Logo"
               />
             </a>
@@ -185,7 +185,7 @@ function Header() {
               <XMarkIcon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-
+{/* TODO: refactor as separate component */}
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
