@@ -1,6 +1,9 @@
 import { SearchParams } from "@/app/search/page";
 import { Result } from "@/typings";
 
+// only available with Vercel Pro account
+export const maxDuration = 300;
+
 export async function fetchResults(searchParams: SearchParams) {
     const username = process.env.OXYLABS_USERNAME;
     const password = process.env.OXYLABS_PASSWORD;
@@ -8,7 +11,7 @@ export async function fetchResults(searchParams: SearchParams) {
     const url = new URL(searchParams.url);
     Object.keys(searchParams).forEach((key) => {
         if (key === "url" || key === "location") return;
-    
+
         const value = searchParams[key as keyof SearchParams];
     
         if (typeof value === "string") {
