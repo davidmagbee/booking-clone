@@ -15,7 +15,7 @@ export default function Home() {
         <SearchForm />
       </section>
 
-      <section className="mx-auto max-w-7xl mt-10 p-6 bg-white rounded-t-lg">
+      <section className="mx-auto max-w-7xl mt-10 p-6 bg-white rounded-lg">
         <div className="pt-5">
           <h3 className="font-bold text-xl">Popular Destinations</h3>
           <p className="font-light">
